@@ -1,6 +1,8 @@
-## Title
+## No SQL Social Media Back End Application
 
 ## Description
+This application is an API for a social media website built using express.js, MongoDB database, and Mongoose ODM.
+The API allows for users to create thoughts and react to friends thoughts.
 
 ## Table of Contents
 - [Installation](#install)
@@ -10,6 +12,10 @@
 
 
 ## Installation
+Clone the repository and make sure you have node installed on your machine.
+Run the command 'npm i' in the terminal to install the packages for the dependencies.
+Then run 'npm start' in the terminal to start the server.
+The application will then run in INSOMNIA at http://localhost:3001
 
 ## Video Demo
 
