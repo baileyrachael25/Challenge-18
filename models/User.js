@@ -1,24 +1,27 @@
-const { Schema, model, Types } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 // Schema to create User model
 const userSchema = new Schema(
   {
     username: {
       type: String,
+      unique: true,
       required: true,
-      max_length: 50,
+      trim: true,
     },
     email: {
       type: String,
+      unique: true,
       required: true,
-      max_length: 50,
     },
-    thoughts: {
-      type: String,
-      required: true,
-      max_length: 50,
-    },
-    friends: [assignmentSchema],
+    thoughts: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Thought'
+    }],
+    friends: [{
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    }],
   },
   {
     toJSON: {
